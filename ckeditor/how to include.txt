@@ -1,0 +1,24 @@
+For ckeditor use :
+<script type="text/javascript" src="<?php echo base_url(); ?>ckeditor/ckeditor.js"></script>
+
+ <?php $data = array(
+                                   'name'        => 'layout',
+                                   'id'          => 'layout',
+                                   'value'       => @$post['layout'],
+                                   
+                               );
+           echo form_textarea($data);?></td>
+           <script type="text/javascript">
+                   CKEDITOR.replace('layout',
+                   {
+                           toolbar : 'MyToolbar',
+                           width:'600',
+                           height:'400',
+                           filebrowserBrowseUrl : '/ckfinder/ckfinder.html',
+                           filebrowserImageBrowseUrl : '/ckfinder/ckfinder.html?type=Images',
+                           filebrowserFlashBrowseUrl : '/ckfinder/ckfinder.html?type=Flash',
+                           filebrowserUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+                           filebrowserImageUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+                           filebrowserFlashUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+                   });
+           </script>

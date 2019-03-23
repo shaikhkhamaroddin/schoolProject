@@ -1,0 +1,8 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond $1 !^(index\.php|img|js|css|fonts|uploads|userdata|fancy2.1.5|images|ckeditor|ckfinder|robots\.txt)
+
+RewriteRule ^(.*)$ /index.php?/$1 [L,QSA]
+
+Options All -Indexes
+
